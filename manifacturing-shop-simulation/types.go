@@ -1,4 +1,4 @@
-package simulation
+package manifacturing_shop_simulation
 
 type CumulativeStatistics struct {
 	MaxQueueLength int
@@ -12,10 +12,14 @@ func (cs *CumulativeStatistics) Prepare(newQueueLength int) {
 	}
 	cs.AvgQueueLength += newQueueLength
 }
-func (cs * CumulativeStatistics) GenerateReport() StatisticsReport{
+func (cs *CumulativeStatistics) GenerateReport() StatisticsReport {
 	report := StatisticsReport{
 		MaxQueueLength: cs.MaxQueueLength,
-		AvgQueueLength: cs.AvgQueueLength / len(cs.QueueLengths),
+	}
+	if len(cs.QueueLengths) <= 0 {
+		report.AvgQueueLength = 0
+	}else {
+		report.AvgQueueLength = cs.AvgQueueLength / len(cs.QueueLengths)
 	}
 	return report
 }

@@ -1,8 +1,10 @@
 package main
 
-import "ManifacturingShopSimulation/simulation"
+import (
+	"ManifacturingShopSimulation/manifacturing-shop-simulation"
+)
 
 func main() {
-	simulation := simulation.NewSimulation()
+	simulation := manifacturing_shop_simulation.NewSimulation()
 	simulation.Start(100,2,10,10)
 }
