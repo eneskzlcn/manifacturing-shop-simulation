@@ -21,13 +21,17 @@ func New() *Simulation {
 	return &Simulation{}
 }
 
-func (s *Simulation) init(properties Properties) {
+func (s *Simulation) init(properties Properties) error {
+	if err := properties.Validate(); err != nil {
+		return err
+	}
 	s.Properties = properties
 	s.Time = 0
 	s.InspectorAvailability = true
 	s.Finished = false
 	s.initFEL()
 	s.initExamineQueue()
+	return nil
 }
 
 func (s *Simulation) initExamineQueue() {
@@ -41,14 +45,17 @@ func (s *Simulation) initFEL() {
 	s.FELStatistics = CumulativeStatistics{}
 }
 
-func (s *Simulation) Start(properties Properties) {
-	s.init(properties)
+func (s *Simulation) Start(properties Properties) error {
+	if err := s.init(properties); err != nil {
+		return err
+	}
 	for !s.Finished {
 		eventData := s.timeAdvanceFn()
 		s.handleEvent(eventData)
 	}
 	report := s.GenerateReport()
 	report.Print()
+	return nil
 }
 
 func (s *Simulation) timeAdvanceFn() EventData {
