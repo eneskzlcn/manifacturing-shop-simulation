@@ -29,7 +29,7 @@ type EventData struct {
 
 func (e EventData) Print(eventOrder int) {
 	fmt.Printf("%d'th Event = Type: %s, Arrival Time: %d, Finish Time: %d, Standby Duration: %d\n",
-		eventOrder, e.Type, e.ArrivalTime, e.FinishTime, e.StandbyDuration)
+		eventOrder, e.Type.GetString(), e.ArrivalTime, e.FinishTime, e.StandbyDuration)
 }
 
 func (e EventData) GetPriority() int {

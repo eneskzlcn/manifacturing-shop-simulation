@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	manifacturingShopSimulation := simulation.NewSimulation()
+	manifacturingShopSimulation := simulation.New()
 	manifacturingShopSimulation.Start(simulation.Properties{
 		MinExamineTime:               2,
 		MaxExamineTime:               10,
