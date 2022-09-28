@@ -5,6 +5,12 @@ import (
 )
 
 func main() {
-	simulation := simulation.NewSimulation()
-	simulation.Start(100, 2, 10, 10)
+	manifacturingShopSimulation := simulation.NewSimulation()
+	manifacturingShopSimulation.Start(simulation.Properties{
+		MinExamineTime:               2,
+		MaxExamineTime:               10,
+		TerminateCounter:             100,
+		FailurePossibilityPercentage: 10,
+		PartTurnOutRate:              5,
+	})
 }

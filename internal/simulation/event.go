@@ -1,5 +1,7 @@
 package simulation
 
+import "fmt"
+
 type EventType int
 
 func (e EventType) GetString() string {
@@ -23,6 +25,11 @@ type EventData struct {
 	ArrivalTime     int
 	FinishTime      int
 	StandbyDuration int
+}
+
+func (e EventData) Print(eventOrder int) {
+	fmt.Printf("%d'th Event = Type: %s, Arrival Time: %d, Finish Time: %d, Standby Duration: %d\n",
+		eventOrder, e.Type, e.ArrivalTime, e.FinishTime, e.StandbyDuration)
 }
 
 func (e EventData) GetPriority() int {
