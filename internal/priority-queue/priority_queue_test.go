@@ -1,6 +1,7 @@
-package priority_queue
+package priority_queue_test
 
 import (
+	priority_queue "github.com/eneskzlcn/manifacturing-shop-simulation/internal/priority-queue"
 	"github.com/stretchr/testify/assert"
 	"log"
 	"testing"
@@ -17,7 +18,7 @@ func TestPriorityQueue(t *testing.T) {
 	testItems := []TestQueueItem{
 		{value: 2}, {value: 3}, {value: 20},
 	}
-	queue := NewPriorityQueue()
+	queue := priority_queue.NewPriorityQueue()
 	assert.NotNil(t, queue)
 	log.Printf("%v", testItems[0])
 	queue.Enqueue(testItems[0])
