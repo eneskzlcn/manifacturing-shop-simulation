@@ -14,20 +14,16 @@ Mehmet Vakif University.
 - If you have make and go 1.17 available in your system just run the command to compile
 and run the program;
 ``` bash
-    make run
+make run
 ```
 - If you have docker available on your system you can simply run the command to compile
 and run.
 ```bash
-    docker run eneskzlcn/manifacturing-shop-simulation:latest
+docker run eneskzlcn/manifacturing-shop-simulation:latest
 ```
 - Or you can build the image stands on project directory yourself and use it. Suppose that your
 terminal on the project's working directory;
 ```bash
-    docker build -t manifacturing-shop-simulation:latest
-    docker run manifacturing-shop-simulation:latest
+docker build -t manifacturing-shop-simulation:latest
+docker run manifacturing-shop-simulation:latest
 ```
-
-Docker image available in the link below.
-
-https://hub.docker.com/repository/docker/eneskzlcn/manifacturing-shop-simulation

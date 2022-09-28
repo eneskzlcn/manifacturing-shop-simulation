@@ -1,8 +1,8 @@
-package manifacturing_shop_simulation
+package simulation
 
 type EventType int
 
-func (e EventType) GetString() string{
+func (e EventType) GetString() string {
 	switch e {
 	default:
 		return ""
@@ -12,17 +12,19 @@ func (e EventType) GetString() string{
 		return "EXAMINE"
 	}
 }
+
 const (
 	EXAMINE EventType = iota
 	ARRIVAL
 )
 
 type EventData struct {
-	Type        EventType
-	ArrivalTime int
-	FinishTime int
+	Type            EventType
+	ArrivalTime     int
+	FinishTime      int
 	StandbyDuration int
 }
+
 func (e EventData) GetPriority() int {
 	return e.FinishTime
 }
