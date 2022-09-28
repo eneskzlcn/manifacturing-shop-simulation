@@ -9,8 +9,8 @@ const (
 	PartTurnOutRateLowerBound = 5
 	PartTurnOutRateUpperBound = 10
 
-	MaximumExamineTimeLowerBound = 8
-	MaximumExamineTimeUpperBound = 4
+	MaximumExamineTimeLowerBound = 4
+	MaximumExamineTimeUpperBound = 8
 
 	MinimumExamineTimeLowerBound = 1
 	//minimumExamineTimeUpperBound depends on maximumExamineTime value dynamically(must be lower than it.)
@@ -26,7 +26,7 @@ var (
 	InvalidPartTurnOutRate = errors.New(fmt.Sprintf("invalid part out rate. must be in range [%d, %d]",
 		PartTurnOutRateLowerBound, PartTurnOutRateUpperBound))
 	InvalidMinimumExamineTime = errors.New(
-		fmt.Sprintf("must be greater or equal than %d and lower than Maximum Examine Time",
+		fmt.Sprintf("minimum examine time must be greater or equal than %d and lower than Maximum Examine Time",
 			MinimumExamineTimeLowerBound))
 	InvalidMaximumExamineTime = errors.New(fmt.Sprintf("invalid maximum examine time. must be in range [%d, %d]",
 		MaximumExamineTimeLowerBound, MaximumExamineTimeUpperBound))
