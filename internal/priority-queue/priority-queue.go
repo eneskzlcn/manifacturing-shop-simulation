@@ -2,9 +2,8 @@ package priority_queue
 
 import "log"
 
-/* This queue uses priority approach; item has little priority value is more prior.
- */
-//
+/* This queue uses priority approach; item has little priority value is more prior. */
+
 type QueueItem interface {
 	GetPriority() int
 }

@@ -1,7 +1,7 @@
 package priority_queue_test
 
 import (
-	priority_queue "github.com/eneskzlcn/manufacturing-shop-simulation/internal/priority-queue"
+	"github.com/eneskzlcn/manufacturing-shop-simulation/internal/priority-queue"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
