@@ -7,7 +7,7 @@ package cobra
 
 import (
 	"fmt"
-	"github.com/eneskzlcn/manifacturing-shop-simulation/internal/simulation"
+	"github.com/eneskzlcn/manufacturing-shop-simulation/internal/simulation"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -17,7 +17,7 @@ var rootCmd = &cobra.Command{
 	Use:        "simulation",
 	Aliases:    nil,
 	SuggestFor: nil,
-	Short:      "Manifacturing shop simulation",
+	Short:      "manufacturing shop simulation",
 	Long: `
 A machine tool in a manufacturing shop is turning out parts at the 
 rate of every x minutes. As they are finished, the parts are sent to an 
@@ -33,8 +33,8 @@ Constraints:
 20 <= d <= 90, 
 100 <= m <= 500`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		manifacturingShopSimulation := simulation.New()
-		err := manifacturingShopSimulation.Start(simulation.Properties{
+		manufacturingShopSimulation := simulation.New()
+		err := manufacturingShopSimulation.Start(simulation.Properties{
 			MinExamineTime:               minimumExamineTime,
 			MaxExamineTime:               maximumExamineTime,
 			TerminateCounter:             faultyPartCountToTerminate,

@@ -1,9 +1,9 @@
 package simulation
 
 import (
-	priority_queue "github.com/eneskzlcn/manifacturing-shop-simulation/internal/priority-queue"
-	"github.com/eneskzlcn/manifacturing-shop-simulation/internal/util/convertutil"
-	"github.com/eneskzlcn/manifacturing-shop-simulation/internal/util/randomutil"
+	priority_queue "github.com/eneskzlcn/manufacturing-shop-simulation/internal/priority-queue"
+	"github.com/eneskzlcn/manufacturing-shop-simulation/internal/util/convertutil"
+	"github.com/eneskzlcn/manufacturing-shop-simulation/internal/util/randomutil"
 )
 
 type Simulation struct {

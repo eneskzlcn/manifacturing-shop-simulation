@@ -1,4 +1,4 @@
-module github.com/eneskzlcn/manifacturing-shop-simulation
+module github.com/eneskzlcn/manufacturing-shop-simulation
 
 go 1.18
 

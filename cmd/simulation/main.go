@@ -1,6 +1,6 @@
 package main
 
-import "github.com/eneskzlcn/manifacturing-shop-simulation/internal/cobra"
+import "github.com/eneskzlcn/manufacturing-shop-simulation/internal/cobra"
 
 func main() {
 
