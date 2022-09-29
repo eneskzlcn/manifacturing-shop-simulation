@@ -1,7 +1,7 @@
 package convertutil_test
 
 import (
-	"github.com/eneskzlcn/softdare/internal/util/convertutil"
+	"github.com/eneskzlcn/manufacturing-shop-simulation/internal/util/convertutil"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
