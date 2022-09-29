@@ -42,7 +42,6 @@ docker build -t manufacturing-shop-simulation:latest .
 ```
 
 ### How To Run
-
 - If you have go 1.18 available in your system just run the command to compile
 and run the program;
 ```shell
